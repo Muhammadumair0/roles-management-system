@@ -1,0 +1,21 @@
+dist: xenial
+language: node_js
+node_js:
+  - '12'
+cache:
+  npm: true
+services:
+  - postgreSQL
+before_script:
+  - cp .env.example .env
+env:
+  - NODE_ENV=test
+if: tag IS present
+deploy:
+  provider: npm
+  email: $NPM_EMAIL
+  api_key: $NPM_DEPLOY_TOKEN
+  on:
+    branch: main
+    tags: true
+    repo: Muhammadumair0/Near-Mint-Markets-Backend-Subway    
