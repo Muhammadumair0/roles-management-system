@@ -24,17 +24,6 @@
 *   Ability to refresh token
 *   JWT Tokens, make requests with a token after login with `Authorization` header with value `Bearer yourToken` where `yourToken` is the **signed and encrypted token** given in the response from the login process.
 
-## Requirements
-
-*   Node.js **10+**
-*   MongoDB **3.6+**
-*   Redis **5.0+**
-
-### Mailer
-
-To ensure the deliverability of emails sent by this API, `Mailgun` is used for mailing users when they sign up, so if you want to use that feature go sign up at their website <https://www.mailgun.com>
-
-If you want to try a different method it´s ok, I used <https://nodemailer.com> for this API and they have different transport methods like: smtp.
 
 ### Stack
 
